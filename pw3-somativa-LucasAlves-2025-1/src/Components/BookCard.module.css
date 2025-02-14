@@ -1,0 +1,32 @@
+img{
+    width: 180px;
+    height: 250px;
+    border-radius: 10px;    
+}
+
+.card{
+    text-align: center;
+    background-color: rgb(26, 66, 151);
+    color: white;
+    padding: 10px;
+    margin: 20px;   
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 20px 20px 50px black;
+    border: 10px solid   rgb(6, 43, 122);
+}
+
+.titulo{
+    padding: 20px;
+    background-color: rgb(6, 43, 122);
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.titulo h3{
+    margin-bottom: 10px;
+    background-color: rgb(6, 43, 122);
+}
+.titulo p{
+    background-color: rgb(6, 43, 122);
+}

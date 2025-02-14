@@ -1,0 +1,21 @@
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    bottom: 0;
+    flex: 1;
+}
+
+.cards{
+    flex: 1;
+    bottom: 0;
+    align-items: center;
+    display: flex;
+}
+.card{
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+

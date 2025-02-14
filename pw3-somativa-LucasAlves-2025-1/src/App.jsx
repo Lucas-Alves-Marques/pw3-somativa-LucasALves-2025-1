@@ -1,35 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import style from "./App.module.css";
+import BookCard from "./Components/BookCard";
+import asCavernasDeAco from "./Img/cavernas_aco.jpg";
+import ladraoDeRaios from "./Img/Ladrao_de_Raios.jpg";
+import oSolDesvelado from "./Img/sol_desvelado.jpg";
+import marDeMonstros from "./Img/O_Mar_de_Monstros.jpg";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className={style.body}>
+        <h1>PW3 - WEBAPP - LIVRARIA</h1>
+        <div className={style.cards}>
+          <div className={style.card}>
+            <BookCard
+              titulo="As Cavernas de Aço"
+              autor="Isaac Azimov"
+              imagem={asCavernasDeAco}
+            />
+
+            <BookCard
+              titulo="Parcy Jackson - O ladrão de Raios"
+              autor="Rick Riordan"
+              imagem={ladraoDeRaios}
+            />
+
+            <BookCard
+              titulo="O sol Desvelado"
+              autor="Isaac Azimov"
+              imagem={oSolDesvelado}
+            />
+
+            <BookCard
+              titulo="Parcy Jackson - O Mar de Monstros"
+              autor="Rick Riordan"
+              imagem={marDeMonstros}
+            />
+            </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
