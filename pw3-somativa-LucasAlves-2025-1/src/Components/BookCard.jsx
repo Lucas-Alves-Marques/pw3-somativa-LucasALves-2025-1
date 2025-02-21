@@ -12,6 +12,7 @@ function BookCard({ titulo, autor, imagem, livro }) {
       </div>
     </div>
   );
+  
 }
 
 export default BookCard;
