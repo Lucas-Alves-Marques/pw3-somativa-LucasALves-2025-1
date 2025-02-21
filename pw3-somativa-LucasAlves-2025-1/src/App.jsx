@@ -23,9 +23,10 @@ function App() {
               autor="Rick Riordan"
               imagem={ladraoDeRaios}
             />
-
+          </div>
+          <div className={style.card}>
             <BookCard
-              titulo="O sol Desvelado"
+              titulo="O Sol Desvelado"
               autor="Isaac Azimov"
               imagem={oSolDesvelado}
             />
@@ -35,7 +36,7 @@ function App() {
               autor="Rick Riordan"
               imagem={marDeMonstros}
             />
-            </div>
+          </div>
         </div>
       </div>
     </>
