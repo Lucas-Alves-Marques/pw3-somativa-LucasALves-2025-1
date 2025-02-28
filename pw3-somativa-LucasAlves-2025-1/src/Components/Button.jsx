@@ -1,13 +1,11 @@
-import style from "./Button.module.css"
-import { RiInformation2Line as Details } from "react-icons/ri";
+import style from './Button.module.css'
 
-function Button({label}) {
-
-    return (
-        <div className={style.buttonContainer}>
-            <button><Details className={style.iconDetails} />{label}</button>
-        </div>
-    )
+const Button = ({label})=>{
+    return(
+            <div className={style.buttonContainer}>
+                <button>{label}</button>
+            </div>
+    )  
 }
 
-export default Button;
+export default Button

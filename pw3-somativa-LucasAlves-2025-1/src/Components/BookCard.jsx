@@ -1,18 +1,18 @@
-import style from "./BookCard.module.css";
-import Button from "./Button";
+import Button from './Button'
 
-function BookCard({ titulo, autor, imagem, livro }) {
-  return (
-    <div className={style.card}>
-      <img src={imagem} />
-      <div className={style.titulo}>
-        <h3>{titulo}</h3>
-        <p>{autor}</p>
-        <Button label={'DETALHE'}/> 
-      </div>
-    </div>
-  );
-  
+import style from './BookCard.module.css'
+
+const BookCard = ({titulo, autor, imagem})=>{
+    return(
+        
+        <div className={style.bookCard}>
+            <h3 className={style.titulo}>{titulo}</h3>
+            <p className={style.autor}>{autor}</p>
+            <img src={imagem} alt="Capa: As Cavernas de Aço" />
+            <Button label='DETALHE' />
+        </div>
+        
+    )
 }
 
-export default BookCard;
+export default BookCard

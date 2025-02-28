@@ -1,34 +1,24 @@
-.card{
-    text-align: center;
-    background-color: rgb(0, 0, 0, 0.8);
-    color: white;
-    padding: 10px;
-    margin: 20px;   
-    width: 400px;
-    border-radius: 20px;
-    box-shadow: 20px 20px 50px black;
-    border: 10px solid   rgb(0, 0, 0);
-    backdrop-filter: blur(2px);
-}
-
-img{
-    width: 150px;    
-    border-radius: 10px;    
+.bookCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    width: max-content;
+    padding: 5px;
+    background-color: #DEDEDE;
+    border: 1px solid #CCC;
+    font-family: Helvetica;
 }
 
 .titulo{
-    padding: 20px;
-    background-color: rgb(0, 0, 0);
-    border-radius: 20px;
-    margin-top: 20px;
+    font-size: 12px;
 }
 
-.titulo h3{
-    margin-bottom: 10px;
-    background-color: rgb(0, 0, 0);
-    font-size: 30px;
+.autor{
+    font-size: 10px;
 }
 
-.titulo p{
-    background-color: rgb(0, 0, 0);
+img{
+    width: 80px;
+    border-radius: 5px;
 }
