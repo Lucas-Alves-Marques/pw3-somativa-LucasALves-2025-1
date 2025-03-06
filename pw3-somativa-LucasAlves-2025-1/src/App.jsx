@@ -6,7 +6,7 @@ import Container from './components/layout/Container'
 
 /* IMPORTS DOS COMPONENTES DE PÁGINAS */
 import Home from './components/pages/Home'
-import CreateBook from './components/pages/CreateBook'
+import CreateBook from './components/pages/CreateBook.jsx'
 import ListBook from './components/pages/ListBook'
 
 /* IMPORTAÇÃO DO NAVBAR */

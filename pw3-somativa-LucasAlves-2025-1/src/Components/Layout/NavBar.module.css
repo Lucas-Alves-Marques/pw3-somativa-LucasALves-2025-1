@@ -20,14 +20,14 @@
 
 
 .item a{
-    color:#7733ff;
+    color:#ffffff;
     text-decoration: none;
 }
 
 
 .item a:hover{
-    color:#7733ff;
-}
+    color:#ffffff;
+}   
 
 .logo{
     width: 120px;
