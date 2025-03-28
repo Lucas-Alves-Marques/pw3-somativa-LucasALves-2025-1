@@ -1,0 +1,34 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(39, 80, 6, 0.63);
+    backdrop-filter: blur(2px);
+    padding: 1em;
+}
+
+.list{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item{
+    margin-right: 1em;
+    color: #FFF;
+}
+
+
+.item a{
+    color:#ffffff;
+    text-decoration: none;
+}
+
+
+.item a:hover{
+    color:#ffffff;
+}   
+
+.logo{
+    width: 120px;
+}

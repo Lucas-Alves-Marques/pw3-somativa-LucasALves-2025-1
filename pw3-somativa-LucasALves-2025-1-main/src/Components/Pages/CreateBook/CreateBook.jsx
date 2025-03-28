@@ -1,0 +1,110 @@
+import React, { useEffect, useState } from "react";
+import style from "./Createbooks.module.css";
+
+import Input from "../../Form/Input/Input";
+import Select from "../../Form/Select/Select";
+import Button from "../../Form/Button/Button";
+
+const CreateBook = () => {
+  const [book, setBook] = useState([]);
+
+  //cria a estrutura de state para os dados de categoria
+
+  const {categories, setCategories} = useState([])
+
+  // captura de dados do input
+
+  const handleBook = (e) => {
+    setBook({ ...book, [e.target.name]: e.target.value });
+
+    console.log(book);
+  };
+
+  // captura de dados do select
+
+  const handleChangeCategory = (e) => {
+    setBook({
+      ...book,
+      cod_categoria: e.target.options[e.target.selectedIndex].value,
+    });
+
+  };
+
+  // envio dos dados para a API
+
+  const submit = (e) => {
+    e.preventDefault();
+
+    console.log(book);
+  };
+
+  // Recupera os dados de categoria da APIRest
+
+  useEffect(()=>{
+
+    fetch('https://127.0.0.1:5000/listagemCateorias', {
+      method:'GET',
+      headers:{
+        'Content-Type':'application/json',
+        'Access-Control-Allow-Origin':'*',
+        'Access-Control-Allow-Headers':'*',
+      }
+
+    }).then((response)=>
+
+      response.json()
+      // console.log(response.json())
+
+    ).then((categories)=>{
+
+      console.log(categories.data)
+
+    })
+
+  },[]);
+
+  return (
+    <section className={style.create_book_container}>
+
+      <form onSubmit={submit}>
+
+         <h1>CADASTRO DE LIVROS</h1>
+
+        <Input
+          type="text"
+          name="nome_livro"
+          id="nome_livro"
+          placeholder="Digite o nome do livro"
+          action={handleBook}
+        />
+
+        <Input
+          type="text"
+          name="autor_livro"
+          id="autor_livro"
+          placeholder="Digite o nome do autor"
+          action={handleBook}
+        />
+
+        <Input
+          type="text"
+          name="descricao_livro"
+          id="descricao_livro"
+          placeholder="Digite a descrição do livro"
+          action={handleBook}
+        />
+
+        <Select
+          name="cod_categoria"
+          id="cod_categoria"
+          text="Categoria do Livro"
+          handlerChange={handleChangeCategory}
+        />
+
+        <Button label="Cadastrar Livro" />
+      </form>
+    </section>
+  );
+};
+
+export default CreateBook;
