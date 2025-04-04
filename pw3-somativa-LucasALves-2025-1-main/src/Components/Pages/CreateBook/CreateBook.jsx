@@ -10,7 +10,7 @@ const CreateBook = () => {
 
   //cria a estrutura de state para os dados de categoria
 
-  const {categories, setCategories} = useState([])
+  const [categories, setCategories] = useState([])
 
   // captura de dados do input
 
@@ -33,42 +33,87 @@ const CreateBook = () => {
   // envio dos dados para a API
 
   const submit = (e) => {
+
     e.preventDefault();
 
-    console.log(book);
+    insertBook(book)
+
+    console.log(book)
+
   };
 
   // Recupera os dados de categoria da APIRest
 
-  useEffect(()=>{
+  useEffect(() => {
 
-    fetch('https://127.0.0.1:5000/listagemCateorias', {
-      method:'GET',
-      headers:{
-        'Content-Type':'application/json',
-        'Access-Control-Allow-Origin':'*',
-        'Access-Control-Allow-Headers':'*',
-      }
+    fetch('http://127.0.0.1:5000/listagemCateorias', {
 
-    }).then((response)=>
+      method: 'GET',
+      headers: {
+
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': '*',
+
+      },
+
+    }).then((response) =>
 
       response.json()
       // console.log(response.json())
 
-    ).then((categories)=>{
+    ).then((categories) => {
 
-      console.log(categories.data)
+      // console.log('TESTE' + categories.data)
+      setCategories(categories.data)
 
+    }).catch((erro) => {
+
+      console.log('Erro: ' + erro)
     })
 
-  },[]);
+  }, []);
+
+  // Inserção de Livro
+
+  const insertBook = (book) =>{
+
+    fetch('http://127.0.0.1:5000/inserirLivro', {
+
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': '*',
+
+      },
+      body: JSON.stringify(book)
+
+    }).then((response) =>
+
+      response.json()
+      // console.log(response.json())
+
+    ).then((respJson) => {
+
+      console.log('Resposta: ' + respJson)
+
+    }).catch((erro) => {
+
+      console.log('Erro: ' + erro)
+    })
+
+
+  }
 
   return (
     <section className={style.create_book_container}>
 
       <form onSubmit={submit}>
 
-         <h1>CADASTRO DE LIVROS</h1>
+        <h1>CADASTRO DE LIVROS</h1>
 
         <Input
           type="text"
@@ -99,9 +144,10 @@ const CreateBook = () => {
           id="cod_categoria"
           text="Categoria do Livro"
           handlerChange={handleChangeCategory}
+          options={categories}
         />
 
-        <Button label="Cadastrar Livro" />
+        <Button label="Cadastrar Livro"  />
       </form>
     </section>
   );

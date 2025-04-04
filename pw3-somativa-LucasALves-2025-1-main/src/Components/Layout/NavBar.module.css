@@ -11,17 +11,21 @@
     list-style: none;
     align-items: center;
     justify-content: space-between;
+    text-decoration: none;
 }
 
 .item{
     margin-right: 1em;
     color: #FFF;
+    text-decoration: none;
+    list-style: none;
 }
 
 
 .item a{
     color:#ffffff;
     text-decoration: none;
+    
 }
 
 
