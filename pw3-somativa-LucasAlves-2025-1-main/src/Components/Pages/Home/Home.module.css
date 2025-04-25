@@ -1,0 +1,40 @@
+.home_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    
+}
+
+.home_container div{
+    background-color: rgba(39, 80, 6, 0.63);
+    backdrop-filter: blur(2px); 
+    padding: 2vh; 
+    text-align: center;
+    border-radius: 2vh;
+    color: white;
+}
+
+.home_container h1{
+    font-size: 2.5em;
+    margin-bottom: .5em;
+}
+
+.home_container h1 span{
+    color: rgba(39, 80, 6);
+    padding: 0 .2em;
+    margin-left: 1vh;
+    border-radius: 1vh;
+    background-color: #222;
+}
+
+.home_container p{
+    margin-bottom: 1.5em;
+}
+
+.home_container img{
+    width: 70vh;
+    border-radius: 2vh;
+    margin: 0;
+}
