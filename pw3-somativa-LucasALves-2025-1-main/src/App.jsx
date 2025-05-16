@@ -1,43 +1,43 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import style from './App.module.css'
-
 import Container from './components/layout/Container'
 
 /* IMPORTS DOS COMPONENTES DE PÁGINAS */
-import Home from './components/pages/Home/Home.jsx'
-import CreateBook from './components/pages/CreateBook/CreateBook.jsx'
-import ListBook from './components/pages/ListBook/ListBook.jsx'
+import Home from './Components/Pages/Home/Home.jsx'
+import CreateBook from './Components/Pages/CreateBook/CreateBook.jsx'
+import ListBook from './Components/Pages/ListBook/ListBook.jsx'
+import DetailBook from './Components/Pages/Details/DetailBook.jsx'
 
 /* IMPORTAÇÃO DO NAVBAR */
 import NavBar from './components/layout/NavBar'
 
 function App() {
 
-  return (    
-      <div className={style.body}>
+  return (
+    <div>
 
-        <BrowserRouter>
+      <BrowserRouter>
 
-          <Container>
+        <Container>
 
-            <Routes>
+          <Routes>
 
-              <Route path='/' element={<NavBar />}>
+            <Route path='/' element={<NavBar />}>
 
-                <Route path='/' element={<Home />} />
-                <Route path='/newBook' element={<CreateBook />} />
-                <Route path='/listBook' element={<ListBook />} />
+              <Route path='/' element={<Home />} />
+              <Route path='/newBook' element={<CreateBook />} />
+              <Route path='/listBook' element={<ListBook />} />
+              <Route path='/detailBook/:cod_livro' element={<DetailBook />} />
 
-              </Route>
+            </Route>
 
-            </Routes>
+          </Routes>
 
-          </Container>
+        </Container>
 
-        </BrowserRouter>
+      </BrowserRouter>
 
-      </div>
+    </div>
   )
 }
 
