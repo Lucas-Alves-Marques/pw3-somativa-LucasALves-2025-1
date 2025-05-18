@@ -1,12 +1,15 @@
 import './Button.module.css'
+import { Link } from 'react-router-dom'
 
-const Button = ({label})=>{
+const Button = ({ label, cod_livro, router }) => {
 
-    return(
-            <div>
+    return (
+        <div>
+            <Link to={`${router}${cod_livro}`}>
                 <button>{label}</button>
-            </div>
-    )  
+            </Link>
+        </div>
+    )
 }
 
 export default Button

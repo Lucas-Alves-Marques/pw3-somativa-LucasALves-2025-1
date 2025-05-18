@@ -8,7 +8,7 @@
 }
 
 .home_container div{
-    background-color: rgba(39, 80, 6, 0.63);
+    background-color: rgba(6, 50, 80, 0.63);
     backdrop-filter: blur(2px); 
     padding: 2vh; 
     text-align: center;
@@ -22,11 +22,11 @@
 }
 
 .home_container h1 span{
-    color: rgba(39, 80, 6);
+    color: rgba(6, 50, 80, 0.63);
     padding: 0 .2em;
     margin-left: 1vh;
     border-radius: 1vh;
-    background-color: #222;
+    background-color: #ffffff;
 }
 
 .home_container p{

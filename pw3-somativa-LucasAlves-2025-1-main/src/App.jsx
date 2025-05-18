@@ -6,9 +6,10 @@ import Container from './components/layout/Container'
 import Home from './components/pages/Home/Home.jsx'
 import CreateBook from './components/pages/CreateBook/CreateBook.jsx'
 import ListBook from './Components/Pages/ListBook/ListBook.jsx'
+import DetailBook from './Components/Pages/Details/DetailBook.jsx'
 
 /* IMPORTAÇÃO DO NAVBAR */
-import NavBar from './components/layout/NavBar'
+import NavBar from '../src/Components/Layout/NavBar.jsx'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
                 <Route path='/' element={<Home />} />
                 <Route path='/newBook' element={<CreateBook />} />
                 <Route path='/listBook' element={<ListBook />} />
+                <Route path='/details/:cod_livro' element={<DetailBook />} />
 
               </Route>
 

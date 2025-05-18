@@ -1,7 +1,7 @@
 .navbar{
     display: flex;
     justify-content: space-between;
-    background-color: rgba(39, 80, 6, 0.63);
+    background-color: rgba(6, 50, 80, 0.63);
     backdrop-filter: blur(2px);
     padding: 1em;
 }
@@ -17,15 +17,13 @@
 .item{
     margin-right: 1em;
     color: #FFF;
-    text-decoration: none;
-    /* list-style: none; */
+    list-style: none;
 }
 
 
 .item a{
     color:#ffffff;
     text-decoration: none;
-    
 }
 
 
