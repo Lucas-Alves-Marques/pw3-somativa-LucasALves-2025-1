@@ -39,7 +39,7 @@ router.post('/inserirCategoria', (req, res)=>{
 });
 
 /* ROTA DE LISTAGEM GERAL DE CATEGORIAS */
-router.get('/listagemCateorias', (req, res)=>{
+router.get('/listagemCategorias', (req, res)=>{
 
     modelCategoria.findAll()
     .then(
