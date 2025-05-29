@@ -42,7 +42,7 @@ const UpdateBooks = () => {
         /* RECUPERA OS DADOS DE CATEGORIA DO BANCO DADOS */
         useEffect(() => {
 
-                fetch('http://localhost:5000/listagemCateorias', {
+                fetch('http://localhost:5000/listagemCategorias', {
                         method: 'GET',
                         headers: {
                                 'Content-Type': 'application/json',

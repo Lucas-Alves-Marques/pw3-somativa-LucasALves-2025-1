@@ -41,27 +41,48 @@ const ListBook = () => {
 
     return (
 
-        <section className={Style.body} >
+        <>
 
-            <h1>LIVROS CADASTRADOS</h1>
+            {books.length >= 1 ?
 
-            <Conteiner>
 
-                {books.map((book) => (
+                <section className={Style.body}>
 
-                    <BookCard
-                        cod_livro={book.cod_livro}
-                        nome_livro={book.nome_livro}
-                        autor_livro={book.autor_livro}
-                        img_livro={ladraoRaios}
-                        key={book.cod_livro} />
-                ))
+                    <h1>LIVROS CADASTRADOS</h1>
 
-                }
+                    <Conteiner>
 
-            </Conteiner>
+                        {books.map((book) => (
 
-        </section>
+                            <BookCard
+                                cod_livro={book.cod_livro}
+                                nome_livro={book.nome_livro}
+                                autor_livro={book.autor_livro}
+                                img_livro={ladraoRaios}
+                                key={book.cod_livro} />
+                        ))
+
+                        }
+
+                    </Conteiner>
+
+
+                </section>
+
+                :
+
+                <section className={Style.NotBook}>
+
+                    <h1>NÃO HÁ LIVROS CADASTRADOS</h1>
+
+                </section>
+
+
+
+            }
+
+        </>
+
 
     )
 }
